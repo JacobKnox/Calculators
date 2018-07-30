@@ -1,0 +1,187 @@
+/*
+INITIAL DEVELOPEMENT BY: Jacob Knox
+LANGUAGE: JavaScript
+PURPOSE: To calculate weighted and unweighted GPA based on inputted grades
+MADE WITH: repl.it
+DO NOT: edit this part of the code
+COMMENTS MADE TO HELP COMPREHEND CODE'S PURPOSE AND FUNCTION
+
+
+COPY OF INITIAL CODE IN CASE OF MODIFICATIONS:
+
+---------------------------------------------
+
+// sets the intial variables for the grade points to 0, used in the GPACalculation function
+var wgradepoint = 0;
+var uwgradepoint = 0;
+// function that calculates the weighted and unweighted grade points for each grade
+function GPACalculation(weightage, grade) {
+  // if the grade is an A...
+	if (grade <= 100 && grade >= 90) {
+    // uses the weightage--honors is 0.5, AP/DE is 1, and regular is 0--to calculate the weighted grade point and uses the wgradepoint variable pre-set as 0
+		wgradepoint = 4 + weightage;
+    // determines the unweighted grade point based upon the grade and uses the uwgradepoint variable pre-set as 0
+		uwgradepoint = 4;
+	}
+  // if the grade is a B...
+  else if (grade < 90 && grade >= 80) {
+		wgradepoint = 3 + weightage;
+		uwgradepoint = 3;
+	}
+  // if the grade is a C...
+  else if (grade < 80 && grade >= 70) {
+		wgradepoint = 2 + weightage;
+		uwgradepoint = 2;
+	}
+  // if the grade is a D...
+  else if (grade < 70 && grade >= 60) {
+		wgradepoint = 1 + weightage;
+		uwgradepoint = 1;
+	}
+  // if the grade is an F...
+  else if (grade < 60) {
+		wgradepoint = 0 + weightage;
+		uwgradepoint = 0;
+	}
+  // tells the user that their input is not valid--as in they input something that is NOT an integer
+  else {
+		console.log('That is not a valid input!');
+	}
+}
+// welcome message, doesn't display until after all aspects have been input
+console.log('Welcome to you personal GPA calculator!');
+// pre-sets all of the variables needed for the actual calculation to 0
+var counter = 0;
+var wtotal = 0;
+var uwtotal = 0;
+// pre-sets the decision to add a grade to the input of the user
+var loop = prompt('Would you like to input a grade?');
+var gradenumber = parseInt(prompt('How many grades would you like to enter?'))
+// if user wants to input a grade...
+if (loop == 'Yes' || loop == 'yes'){
+  while (counter < gradenumber){
+    // sets variable grade to the integer of the users input and sets the variables honors and APorDE to the input of the user
+	  var grade = parseInt(prompt('Please input one of your semester grades.'));
+	  var honors = prompt('Is it an honors course or equivelant?');
+	  var APorDE = prompt('Is it an AP course or equivelant?');
+    // if it is an honors course...
+	  if (honors == 'Yes' || honors == 'yes') {
+      // calls GPACalculation with a weightage of 0.5
+		  GPACalculation(0.5, grade);
+	  }
+    // if it is an AP or DE course...
+    else if (APorDE == 'yes' || APorDE == 'Yes') {
+      // calls GPACalculation with a weightage of 1
+		  GPACalculation(1, grade);
+	  }
+    // if it is a regular course...
+    else {
+      // calls GPACalculation with a weightage of 0
+		  GPACalculation(0, grade);
+	  }
+    // calculates the weighted and unweighted grade point totals
+	  wtotal = wtotal + wgradepoint;
+	  uwtotal = uwtotal + uwgradepoint;
+    // calculates the number of semesters
+	  counter = counter + 1;
+  }
+}
+// calculates the user's weighted and unweighted GPAs
+var wgpa = wtotal / counter;
+var uwgpa = uwtotal / counter;
+// tells the user their weighted and unweighted GPAs
+console.log('Your Weighted GPA is ' + wgpa);
+console.log('Your Unweighted GPA is ' + uwgpa);
+
+---------------------------------------------
+
+*/
+
+
+
+
+
+
+
+
+// sets the intial variables for the grade points to 0, used in the GPACalculation function
+var wgradepoint = 0;
+var uwgradepoint = 0;
+// function that calculates the weighted and unweighted grade points for each grade
+function GPACalculation(weightage, grade) {
+  // if the grade is an A...
+	if (grade <= 100 && grade >= 90) {
+    // uses the weightage--honors is 0.5, AP/DE is 1, and regular is 0--to calculate the weighted grade point and uses the wgradepoint variable pre-set as 0
+		wgradepoint = 4 + weightage;
+    // determines the unweighted grade point based upon the grade and uses the uwgradepoint variable pre-set as 0
+		uwgradepoint = 4;
+	}
+  // if the grade is a B...
+  else if (grade < 90 && grade >= 80) {
+		wgradepoint = 3 + weightage;
+		uwgradepoint = 3;
+	}
+  // if the grade is a C...
+  else if (grade < 80 && grade >= 70) {
+		wgradepoint = 2 + weightage;
+		uwgradepoint = 2;
+	}
+  // if the grade is a D...
+  else if (grade < 70 && grade >= 60) {
+		wgradepoint = 1 + weightage;
+		uwgradepoint = 1;
+	}
+  // if the grade is an F...
+  else if (grade < 60) {
+		wgradepoint = 0 + weightage;
+		uwgradepoint = 0;
+	}
+  // tells the user that their input is not valid--as in they input something that is NOT an integer
+  else {
+		console.log('That is not a valid input!');
+	}
+}
+// welcome message, doesn't display until after all aspects have been input
+console.log('Welcome to you personal GPA calculator!');
+// pre-sets all of the variables needed for the actual calculation to 0
+var counter = 0;
+var wtotal = 0;
+var uwtotal = 0;
+// pre-sets the decision to add a grade to the input of the user
+var loop = prompt('Would you like to input a grade?');
+var gradenumber = parseInt(prompt('How many grades would you like to enter?'))
+// if user wants to input a grade...
+if (loop == 'Yes' || loop == 'yes'){
+  while (counter < gradenumber){
+    // sets variable grade to the integer of the users input and sets the variables honors and APorDE to the input of the user
+	  var grade = parseInt(prompt('Please input one of your semester grades.'));
+	  var honors = prompt('Is it an honors course or equivelant?');
+	  var APorDE = prompt('Is it an AP course or equivelant?');
+    // if it is an honors course...
+	  if (honors == 'Yes' || honors == 'yes') {
+      // calls GPACalculation with a weightage of 0.5
+		  GPACalculation(0.5, grade);
+	  }
+    // if it is an AP or DE course...
+    else if (APorDE == 'yes' || APorDE == 'Yes') {
+      // calls GPACalculation with a weightage of 1
+		  GPACalculation(1, grade);
+	  }
+    // if it is a regular course...
+    else {
+      // calls GPACalculation with a weightage of 0
+		  GPACalculation(0, grade);
+	  }
+    // calculates the weighted and unweighted grade point totals
+	  wtotal = wtotal + wgradepoint;
+	  uwtotal = uwtotal + uwgradepoint;
+    // calculates the number of semesters
+	  counter = counter + 1;
+  }
+}
+// calculates the user's weighted and unweighted GPAs
+var wgpa = wtotal / counter;
+var uwgpa = uwtotal / counter;
+// tells the user their weighted and unweighted GPAs
+console.log('Your Weighted GPA is ' + wgpa);
+console.log('Your Unweighted GPA is ' + uwgpa);
