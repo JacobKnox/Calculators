@@ -1,0 +1,71 @@
+/*
+INITIAL DEVELOPEMENT BY: Jacob Knox
+LANGUAGE: JavaScript
+PURPOSE: To perform one operation, basic calculations
+MADE WITH: repl.it
+DO NOT: edit this part of the code
+COMMENTS MADE TO HELP COMPREHEND CODE'S PURPOSE AND FUNCTION
+
+
+COPY OF INITIAL CODE IN CASE OF MODIFICATIONS:
+
+---------------------------------------------
+
+var numb1 = parseInt(prompt("Insert your first number."));
+var numb2 = parseInt(prompt("Insert your second number."));
+var operation = prompt("What operation would you like to be performed?");
+// sets initial value of the answer to 0
+var answer = 0;
+// if the operation is to add
+if (operation == "add" || operation == "Add" || operation == "+" || operation == "addition" || operation == "Addition"){
+  answer = numb1 + numb2;
+}
+// if the operation is to subtract
+else if (operation == "subtract" || operation == "Subtract" || operation == "-" || operation == "subtraction" || operation == "Subtraction"){
+  answer = numb1 - numb2;
+}
+// if the operation is to multiply
+else if (operation == "multiply" || operation == "Multiply" || operation == "*" || operation == "X" || operation == "x" || operation == "multiplication" || operation == "Multiplication"){
+  answer = numb1 * numb2;
+}
+// if the operation is to divide
+else if (operation == "divide" || operation == "Divide" || operation == "/" || operation == "divion" || operation == "Division"){
+  answer = numb1/numb2;
+}
+// outputs answer
+console.log("Your answer is: " + answer);
+
+---------------------------------------------
+
+*/
+
+
+
+
+
+
+
+
+var numb1 = parseInt(prompt("Insert your first number."));
+var numb2 = parseInt(prompt("Insert your second number."));
+var operation = prompt("What operation would you like to be performed?");
+// sets initial value of the answer to 0
+var answer = 0;
+// if the operation is to add
+if (operation == "add" || operation == "Add" || operation == "+" || operation == "addition" || operation == "Addition"){
+  answer = numb1 + numb2;
+}
+// if the operation is to subtract
+else if (operation == "subtract" || operation == "Subtract" || operation == "-" || operation == "subtraction" || operation == "Subtraction"){
+  answer = numb1 - numb2;
+}
+// if the operation is to multiply
+else if (operation == "multiply" || operation == "Multiply" || operation == "*" || operation == "X" || operation == "x" || operation == "multiplication" || operation == "Multiplication"){
+  answer = numb1 * numb2;
+}
+// if the operation is to divide
+else if (operation == "divide" || operation == "Divide" || operation == "/" || operation == "divion" || operation == "Division"){
+  answer = numb1/numb2;
+}
+// outputs answer
+console.log("Your answer is: " + answer);
