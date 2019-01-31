@@ -154,7 +154,7 @@ var gradenumber = parseInt(prompt('How many grades would you like to enter?'))
 if (loop == 'Yes' || loop == 'yes'){
   while (counter < gradenumber){
     // sets variable grade to the integer of the users input and sets the variables honors and APorDE to the input of the user
-	  var grade = parseInt(prompt('Please input one of your semester grades.'));
+	  var grade = parseInt(prompt('Please input one of your semester grades as an integer.'));
 	  var honors = prompt('Is it an honors course or equivelant?');
 	  var APorDE = prompt('Is it an AP course or equivelant?');
     // if it is an honors course...
@@ -176,7 +176,7 @@ if (loop == 'Yes' || loop == 'yes'){
 	  wtotal = wtotal + wgradepoint;
 	  uwtotal = uwtotal + uwgradepoint;
     // calculates the number of semesters
-	  counter = counter + 1;
+	  counter++;
   }
 }
 // calculates the user's weighted and unweighted GPAs
